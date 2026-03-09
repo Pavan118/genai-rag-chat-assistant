@@ -2,7 +2,6 @@ from flask import Flask, request, jsonify, render_template
 import json
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
-import os
 
 app = Flask(__name__)
 
@@ -89,6 +88,8 @@ def chat():
 
 
 
+import os
+
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
+    port = int(os.environ.get("PORT", 10000))
     app.run(host="0.0.0.0", port=port)
