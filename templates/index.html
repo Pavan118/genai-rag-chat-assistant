@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GenAI Chat Assistant</title>
+</head>
+
+<body>
+
+<h2>GenAI Chat Assistant</h2>
+
+<div id="messages"></div>
+
+<input id="userInput" placeholder="Ask something">
+
+<button onclick="sendMessage()">Send</button>
+
+<script>
+
+async function sendMessage(){
+
+let input=document.getElementById("userInput")
+
+let message=input.value
+
+let messages=document.getElementById("messages")
+
+messages.innerHTML += "<p><b>You:</b> "+message+"</p>"
+
+let res=await fetch("/api/chat",{
+
+method:"POST",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+body:JSON.stringify({
+sessionId:"123",
+message:message
+})
+
+})
+
+let data=await res.json()
+
+messages.innerHTML += "<p><b>Bot:</b> "+data.reply+"</p>"
+
+input.value=""
+
+}
+
+</script>
+
+</body>
+</html>

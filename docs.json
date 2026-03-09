@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Reset Password",
+    "content": "Users can reset their password from Settings > Security."
+  },
+  {
+    "title": "Account Creation",
+    "content": "Users can create an account by clicking the Sign Up button."
+  },
+  {
+    "title": "Update Profile",
+    "content": "Users can update their profile from the profile settings page."
+  },
+  {
+    "title": "Delete Account",
+    "content": "Users can delete their account by contacting customer support."
+  },
+  {
+    "title": "Upload Documents",
+    "content": "Users can upload documents from the dashboard upload section."
+  }
+]
